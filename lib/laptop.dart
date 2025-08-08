@@ -199,8 +199,504 @@ class _NovalapHomePageState extends State<NovalapHomePage> {
                   ],
                 ),
               ),
+              SizedBox(height: 5),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Asus Laptops",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 18,
+                    ),
+                  ),
+                  SizedBox(height: 5),
+                  Wrap(
+                    spacing: 10, // space between items in a row
+                    runSpacing: 10, // space between rows
+                    alignment: WrapAlignment.start,
+                    children: [
+                      Container(
+                        width: 160,
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 5),
+                            ),
+                          ],
+                        ),
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 30),
+                                  // Image + Background Shape
+                                  Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      // Background shape
+                                      Container(
+                                        width: 120,
+                                        height: 80,
+                                        decoration: BoxDecoration(
+                                          color: Colors.yellow[100],
+                                          borderRadius: BorderRadius.circular(
+                                            40,
+                                          ),
+                                        ),
+                                      ),
+                                      // Product image
+                                      Image.asset(
+                                        'assets/asus.png',
+                                        width: 350,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  // Product Title
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "Asus ROG Strix",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Price
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "\$ 290.18",
+                                      style: TextStyle(
+                                        color: Colors.orange,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Rating Stars
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: List.generate(5, (index) {
+                                      return Icon(
+                                        Icons.star,
+                                        size: 14,
+                                        color: Colors.orange,
+                                      );
+                                    }),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            // Like Icon Button at top-right
+                            Positioned(
+                              right: 10,
+                              top: 10,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.deepOrange,
+                                ),
+                                child: Icon(
+                                  Icons.favorite,
+                                  size: 16,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        width: 160,
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 5),
+                            ),
+                          ],
+                        ),
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 30),
+                                  // Image + Background Shape
+                                  Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      // Background shape
+                                      Container(
+                                        width: 120,
+                                        height: 80,
+                                        decoration: BoxDecoration(
+                                          color: Colors.yellow[100],
+                                          borderRadius: BorderRadius.circular(
+                                            40,
+                                          ),
+                                        ),
+                                      ),
+                                      // Product image
+                                      Image.asset(
+                                        'assets/asus.png',
+                                        width: 350,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  // Product Title
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "Asus ROG Strix",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Price
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "\$ 290.18",
+                                      style: TextStyle(
+                                        color: Colors.orange,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Rating Stars
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: List.generate(5, (index) {
+                                      return Icon(
+                                        Icons.star,
+                                        size: 14,
+                                        color: Colors.orange,
+                                      );
+                                    }),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            // Like Icon Button at top-right
+                            Positioned(
+                              right: 10,
+                              top: 10,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.deepOrange,
+                                ),
+                                child: Icon(
+                                  Icons.favorite,
+                                  size: 16,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        width: 160,
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 5),
+                            ),
+                          ],
+                        ),
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 30),
+                                  // Image + Background Shape
+                                  Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      // Background shape
+                                      Container(
+                                        width: 120,
+                                        height: 80,
+                                        decoration: BoxDecoration(
+                                          color: Colors.yellow[100],
+                                          borderRadius: BorderRadius.circular(
+                                            40,
+                                          ),
+                                        ),
+                                      ),
+                                      // Product image
+                                      Image.asset(
+                                        'assets/asus.png',
+                                        width: 350,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  // Product Title
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "Asus ROG Strix",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Price
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "\$ 290.18",
+                                      style: TextStyle(
+                                        color: Colors.orange,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Rating Stars
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: List.generate(5, (index) {
+                                      return Icon(
+                                        Icons.star,
+                                        size: 14,
+                                        color: Colors.orange,
+                                      );
+                                    }),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            // Like Icon Button at top-right
+                            Positioned(
+                              right: 10,
+                              top: 10,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.deepOrange,
+                                ),
+                                child: Icon(
+                                  Icons.favorite,
+                                  size: 16,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+
+                      Container(
+                        width: 160,
+                        margin: EdgeInsets.all(8),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: Colors.grey.withOpacity(0.2),
+                              blurRadius: 10,
+                              spreadRadius: 2,
+                              offset: Offset(0, 5),
+                            ),
+                          ],
+                        ),
+                        child: Stack(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.all(10.0),
+                              child: Column(
+                                children: [
+                                  SizedBox(height: 30),
+                                  // Image + Background Shape
+                                  Stack(
+                                    alignment: Alignment.center,
+                                    children: [
+                                      // Background shape
+                                      Container(
+                                        width: 120,
+                                        height: 80,
+                                        decoration: BoxDecoration(
+                                          color: Colors.yellow[100],
+                                          borderRadius: BorderRadius.circular(
+                                            40,
+                                          ),
+                                        ),
+                                      ),
+                                      // Product image
+                                      Image.asset(
+                                        'assets/asus.png',
+                                        width: 350,
+                                        height: 120,
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(height: 10),
+
+                                  // Product Title
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "Asus ROG Strix",
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Price
+                                  Container(
+                                    alignment: Alignment.topLeft,
+                                    child: Text(
+                                      "\$ 290.18",
+                                      style: TextStyle(
+                                        color: Colors.orange,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ),
+                                  SizedBox(height: 5),
+
+                                  // Rating Stars
+                                  Row(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    children: List.generate(5, (index) {
+                                      return Icon(
+                                        Icons.star,
+                                        size: 14,
+                                        color: Colors.orange,
+                                      );
+                                    }),
+                                  ),
+                                ],
+                              ),
+                            ),
+
+                            // Like Icon Button at top-right
+                            Positioned(
+                              right: 10,
+                              top: 10,
+                              child: Container(
+                                width: 24,
+                                height: 24,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: Colors.deepOrange,
+                                ),
+                                child: Icon(
+                                  Icons.favorite,
+                                  size: 16,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ],
           ),
+        ),
+      ),
+
+      bottomNavigationBar: Container(
+        decoration: BoxDecoration(
+          color: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey.withOpacity(0.9),
+              spreadRadius: 1,
+              blurRadius: 10,
+              offset: Offset(0, -3), // moves shadow upward
+            ),
+          ],
+        ),
+        child: BottomNavigationBar(
+          selectedItemColor: Colors.deepOrange,
+          unselectedItemColor: Colors.black,
+          type: BottomNavigationBarType.fixed,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite),
+              label: 'Favourite',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_bag),
+              label: 'Bag',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.shopping_cart),
+              label: 'Basket',
+            ),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: 'User'),
+          ],
         ),
       ),
     );
