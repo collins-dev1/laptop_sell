@@ -231,6 +231,28 @@ class LaptopList {
   }
 }
 
+class BrandList {
+  Widget getCard({title}) {
+    return Container(
+      padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
+      margin: EdgeInsets.fromLTRB(1, 8, 0, 8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            spreadRadius: 1,
+            blurRadius: 1,
+            offset: Offset(1.0, 1.0),
+          ),
+        ],
+      ),
+      child: Text(title),
+    );
+  }
+}
+
 class LaptopHomePage extends StatefulWidget {
   const LaptopHomePage({super.key});
 
@@ -267,91 +289,8 @@ class _LaptopHomePageState extends State<LaptopHomePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    Container(
-                      padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                      margin: EdgeInsets.fromLTRB(1, 8, 0, 8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: Offset(1.0, 1.0),
-                          ),
-                        ],
-                      ),
-                      child: Text("Apple"),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                      margin: EdgeInsets.fromLTRB(10, 8, 0, 8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: Offset(1.0, 1.0),
-                          ),
-                        ],
-                      ),
-                      child: Text("Asus"),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                      margin: EdgeInsets.fromLTRB(10, 8, 0, 8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: Offset(1.0, 1.0),
-                          ),
-                        ],
-                      ),
-                      child: Text("Hp"),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                      margin: EdgeInsets.fromLTRB(10, 8, 0, 8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: Offset(1.0, 1.0),
-                          ),
-                        ],
-                      ),
-                      child: Text("Dell"),
-                    ),
-                    Container(
-                      padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-                      margin: EdgeInsets.fromLTRB(10, 8, 0, 8),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        color: Colors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: Colors.grey,
-                            spreadRadius: 1,
-                            blurRadius: 1,
-                            offset: Offset(1.0, 1.0),
-                          ),
-                        ],
-                      ),
-                      child: Text("Samsung"),
-                    ),
+                    for (var i = 0; i < 7; i++)
+                      BrandList().getCard(title: "Apple"),
                   ],
                 ),
               ),
