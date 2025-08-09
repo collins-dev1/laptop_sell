@@ -232,7 +232,7 @@ class LaptopList {
 }
 
 class BrandList {
-  Widget getCard({title}) {
+  static Widget getCard({required String title}) {
     return Container(
       padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
       margin: EdgeInsets.fromLTRB(1, 8, 0, 8),
@@ -289,8 +289,17 @@ class _LaptopHomePageState extends State<LaptopHomePage> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                   children: [
-                    for (var i = 0; i < 7; i++)
-                      BrandList().getCard(title: "Apple"),
+                    // List of brand names
+                    for (var brand in [
+                      "Apple",
+                      "Dell",
+                      "HP",
+                      "Lenovo",
+                      "Asus",
+                      "Acer",
+                      "MSI",
+                    ])
+                      BrandList.getCard(title: brand),
                   ],
                 ),
               ),
