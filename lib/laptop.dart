@@ -32,6 +32,8 @@ class NovalapHomePage extends StatefulWidget {
 }
 
 class _NovalapHomePageState extends State<NovalapHomePage> {
+  final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  int pageIndex = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -88,7 +90,7 @@ class _NovalapHomePageState extends State<NovalapHomePage> {
         ),
       ),
 
-      body: IndexedStack(children: [LaptopHomePage()]),
+      body: IndexedStack(index: pageIndex, children: [LaptopHomePage()]),
 
       bottomNavigationBar: Container(
         decoration: BoxDecoration(
@@ -103,6 +105,22 @@ class _NovalapHomePageState extends State<NovalapHomePage> {
           ],
         ),
         child: BottomNavigationBar(
+          currentIndex: pageIndex,
+          onTap: (index) {
+            // if (index == 0) {
+            //   Navigator.push(
+            //     context,
+            //     MaterialPageRoute(builder: (context) => LaptopHomePage()),
+            //   );
+            // } else {
+            //   setState(() {
+            //     pageIndex = index;
+            //   });
+            // }
+            setState(() {
+              pageIndex = index;
+            });
+          },
           selectedItemColor: Colors.deepOrange,
           unselectedItemColor: Colors.black,
           type: BottomNavigationBarType.fixed,
