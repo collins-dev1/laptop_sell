@@ -235,7 +235,7 @@ class BrandList {
   static Widget getCard({required String title}) {
     return Container(
       padding: EdgeInsets.fromLTRB(30, 10, 30, 10),
-      margin: EdgeInsets.fromLTRB(1, 8, 0, 8),
+      margin: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         color: Colors.white,
