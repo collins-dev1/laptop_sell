@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:laptop_sell/pages/register.dart';
 import 'novalap_home_page.dart';
+import 'package:slide_to_act/slide_to_act.dart';
 
 class IntroPage extends StatelessWidget {
   const IntroPage({super.key});
@@ -43,35 +45,23 @@ class IntroPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 50),
-              child: TextButton(
-                style: TextButton.styleFrom(
-                  side: const BorderSide(color: Colors.white),
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 5,
-                    vertical: 11,
-                  ),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(50),
-                  ),
-                  foregroundColor: Colors.white,
+              child: SlideAction(
+                text: "Slide to Register",
+                textStyle: TextStyle(color: Colors.white, fontSize: 18),
+                outerColor: Colors.black,
+                innerColor: Colors.white,
+                sliderButtonIcon: Icon(
+                  Icons.arrow_forward,
+                  color: Colors.black,
                 ),
-                onPressed: () {
-                  Navigator.pushReplacement(
+                onSubmit: () {
+                  Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const NovalapHomePage(),
+                      builder: (context) => const RegisterPage(),
                     ),
                   );
                 },
-                child: const Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Icon(Icons.arrow_circle_right, size: 35),
-                    SizedBox(width: 30),
-                    Text('Click to Home'),
-                    SizedBox(width: 140),
-                  ],
-                ),
               ),
             ),
           ],
