@@ -78,7 +78,6 @@ class _WelcomePageState extends State<WelcomePage> {
                         onPressed: () async {
                           // Show loading indicator
                           showDialog(
-                            barrierColor: Colors.black,
                             context: context,
                             barrierDismissible: false,
                             builder: (BuildContext context) {
@@ -119,7 +118,6 @@ class _WelcomePageState extends State<WelcomePage> {
                         onPressed: () async {
                           // Show loading indicator
                           showDialog(
-                            barrierColor: Colors.black,
                             context: context,
                             barrierDismissible: false,
                             builder: (BuildContext context) {

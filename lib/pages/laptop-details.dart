@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laptop_sell/novalap_home_page.dart';
 import 'package:laptop_sell/pages/bottomNavbar.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:carousel_slider/carousel_slider.dart' as cs;
 
 class LaptopDetailPage extends StatefulWidget {
   const LaptopDetailPage({super.key});
@@ -12,6 +12,13 @@ class LaptopDetailPage extends StatefulWidget {
 
 class _LaptopDetailPageState extends State<LaptopDetailPage> {
   int pageIndex = 0;
+  int currentIndex = 0; // for indicator dots
+
+  final List<String> _images = [
+    "assets/asus.png",
+    "assets/lap1.png",
+    "assets/lap2.png",
+  ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,10 +56,10 @@ class _LaptopDetailPageState extends State<LaptopDetailPage> {
                     children: [
                       // Background Container
                       Container(
-                        width: 250,
-                        height: 150,
+                        width: 300,
+                        height: 220,
                         decoration: BoxDecoration(
-                          color: Colors.yellow[100],
+                          color: Colors.red[100],
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(350),
                             topRight: Radius.circular(50),
@@ -62,31 +69,26 @@ class _LaptopDetailPageState extends State<LaptopDetailPage> {
                         ),
                       ),
 
-                      // Image Carousel
-                      CarouselSlider(
-                        options: CarouselOptions(
+                      // Carousel
+                      cs.CarouselSlider(
+                        options: cs.CarouselOptions(
                           height: 200,
-                          autoPlay: true, // automatic sliding
-                          enlargeCenterPage: true,
-                          viewportFraction: 1, // take full container width
+                          autoPlay: true,
+                          viewportFraction: 1,
+                          onPageChanged: (index, reason) {
+                            setState(() {
+                              currentIndex = index;
+                            });
+                          },
                         ),
-                        items:
-                            [
-                              "assets/asus.png",
-                              "assets/hp.png",
-                              "assets/macbook.png",
-                            ].map((path) {
-                              return Builder(
-                                builder: (BuildContext context) {
-                                  return Image.asset(
-                                    path,
-                                    width: 200,
-                                    height: 200,
-                                    fit: BoxFit.cover,
-                                  );
-                                },
-                              );
-                            }).toList(),
+                        items: _images.map((path) {
+                          return Image.asset(
+                            path,
+                            width: 200,
+                            height: 200,
+                            fit: BoxFit.cover,
+                          );
+                        }).toList(),
                       ),
                     ],
                   ),

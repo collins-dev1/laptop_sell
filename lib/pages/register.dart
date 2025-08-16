@@ -128,7 +128,6 @@ class _RegisterPageState extends State<RegisterPage> {
             onTap: () async {
               // Show loading indicator
               showDialog(
-                barrierColor: Colors.black,
                 context: context,
                 barrierDismissible: false,
                 builder: (BuildContext context) {
@@ -175,7 +174,6 @@ class _RegisterPageState extends State<RegisterPage> {
               onPressed: () async {
                 // Show loading indicator
                 showDialog(
-                  barrierColor: Colors.black,
                   context: context,
                   barrierDismissible: false,
                   builder: (BuildContext context) {
@@ -237,7 +235,6 @@ class _RegisterPageState extends State<RegisterPage> {
               onPressed: () async {
                 // Show loading indicator
                 showDialog(
-                  barrierColor: Colors.black,
                   context: context,
                   barrierDismissible: false,
                   builder: (BuildContext context) {

@@ -67,7 +67,10 @@ class IntroPage extends StatelessWidget {
                       barrierDismissible: false,
                       builder: (BuildContext context) {
                         return Center(
-                          child: CircularProgressIndicator(color: Colors.white),
+                          child: CircularProgressIndicator(
+                            color: Colors.white,
+                            backgroundColor: Colors.blue,
+                          ),
                         );
                       },
                     );

@@ -160,7 +160,6 @@ class _LoginPageState extends State<LoginPage> {
               onPressed: () async {
                 // Show loading indicator
                 showDialog(
-                  barrierColor: Colors.black,
                   context: context,
                   barrierDismissible: false,
                   builder: (BuildContext context) {

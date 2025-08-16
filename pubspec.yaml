@@ -12,7 +12,7 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.8
   slide_to_act: ^2.0.2
-  carousel_slider: ^4.2.1
+  carousel_slider: ^5.0.0
 
 dev_dependencies:
   flutter_test:
@@ -27,3 +27,5 @@ flutter:
     - assets/laptoplogo2.png
     - assets/asus.png
     - assets/googlelogo.png
+    - assets/lap1.png
+    - assets/lap2.png
