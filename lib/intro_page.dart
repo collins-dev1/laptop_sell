@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:laptop_sell/pages/Welcome.dart';
 import 'package:laptop_sell/pages/register.dart';
 import 'novalap_home_page.dart';
 import 'package:slide_to_act/slide_to_act.dart';
@@ -45,23 +46,45 @@ class IntroPage extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(bottom: 50),
-              child: SlideAction(
-                text: "Slide to Register",
-                textStyle: TextStyle(color: Colors.white, fontSize: 18),
-                outerColor: Colors.black,
-                innerColor: Colors.white,
-                sliderButtonIcon: Icon(
-                  Icons.arrow_forward,
-                  color: Colors.black,
+              child: Container(
+                decoration: BoxDecoration(
+                  border: Border.all(color: Colors.white, width: 1),
+                  borderRadius: BorderRadius.circular(50),
                 ),
-                onSubmit: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const RegisterPage(),
-                    ),
-                  );
-                },
+                child: SlideAction(
+                  text: "Slide to Get Started",
+                  textStyle: TextStyle(color: Colors.white, fontSize: 18),
+                  outerColor: Colors.black,
+                  innerColor: Colors.white,
+                  sliderButtonIcon: Icon(
+                    Icons.arrow_forward,
+                    color: Colors.black,
+                  ),
+                  onSubmit: () async {
+                    // Show loading indicator
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return Center(
+                          child: CircularProgressIndicator(color: Colors.white),
+                        );
+                      },
+                    );
+
+                    // Simulate some loading (e.g., fetch data, auth check, etc.)
+                    await Future.delayed(Duration(seconds: 2));
+
+                    // Close the loading dialog
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WelcomePage(),
+                      ),
+                    );
+                  },
+                ),
               ),
             ),
           ],

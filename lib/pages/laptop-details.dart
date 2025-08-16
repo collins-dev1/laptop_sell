@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:laptop_sell/novalap_home_page.dart';
 import 'package:laptop_sell/pages/bottomNavbar.dart';
+import 'package:carousel_slider/carousel_slider.dart';
 
 class LaptopDetailPage extends StatefulWidget {
   const LaptopDetailPage({super.key});
@@ -46,32 +47,46 @@ class _LaptopDetailPageState extends State<LaptopDetailPage> {
                   Stack(
                     alignment: Alignment.center,
                     children: [
+                      // Background Container
                       Container(
                         width: 250,
                         height: 150,
                         decoration: BoxDecoration(
                           color: Colors.yellow[100],
                           borderRadius: const BorderRadius.only(
-                            topLeft: Radius.circular(
-                              350,
-                            ), // round only top-left
-                            topRight: Radius.circular(
-                              50,
-                            ), // slightly round top-right
-                            bottomLeft: Radius.circular(
-                              50,
-                            ), // sharp bottom-left
-                            bottomRight: Radius.circular(
-                              200,
-                            ), // medium round bottom-right
+                            topLeft: Radius.circular(350),
+                            topRight: Radius.circular(50),
+                            bottomLeft: Radius.circular(50),
+                            bottomRight: Radius.circular(200),
                           ),
                         ),
                       ),
-                      Image.asset(
-                        "assets/asus.png",
-                        width: 200,
-                        height: 200,
-                        fit: BoxFit.cover,
+
+                      // Image Carousel
+                      CarouselSlider(
+                        options: CarouselOptions(
+                          height: 200,
+                          autoPlay: true, // automatic sliding
+                          enlargeCenterPage: true,
+                          viewportFraction: 1, // take full container width
+                        ),
+                        items:
+                            [
+                              "assets/asus.png",
+                              "assets/hp.png",
+                              "assets/macbook.png",
+                            ].map((path) {
+                              return Builder(
+                                builder: (BuildContext context) {
+                                  return Image.asset(
+                                    path,
+                                    width: 200,
+                                    height: 200,
+                                    fit: BoxFit.cover,
+                                  );
+                                },
+                              );
+                            }).toList(),
                       ),
                     ],
                   ),
