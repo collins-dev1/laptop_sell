@@ -19,7 +19,7 @@ class LaptopHomePage extends StatelessWidget {
               Column(
                 children: [
                   Text(
-                    "Choose a Brand",
+                    "Choose the Brand",
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.bold,
@@ -50,7 +50,26 @@ class LaptopHomePage extends StatelessWidget {
               ),
               SizedBox(height: 5),
               InkWell(
-                onTap: () {
+                onTap: () async {
+                  // Show loading indicator
+                  showDialog(
+                    context: context,
+                    barrierDismissible: false,
+                    builder: (BuildContext context) {
+                      return Center(
+                        child: CircularProgressIndicator(
+                          color: Colors.blue,
+                          backgroundColor: Colors.white,
+                        ),
+                      );
+                    },
+                  );
+
+                  // Simulate some loading (e.g., fetch data, auth check, etc.)
+                  await Future.delayed(Duration(seconds: 2));
+
+                  // Close the loading dialog
+                  Navigator.pop(context);
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => LaptopDetailPage()),

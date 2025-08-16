@@ -59,7 +59,7 @@ class _LaptopDetailPageState extends State<LaptopDetailPage> {
                         width: 300,
                         height: 220,
                         decoration: BoxDecoration(
-                          color: Colors.red[100],
+                          color: Colors.red,
                           borderRadius: const BorderRadius.only(
                             topLeft: Radius.circular(350),
                             topRight: Radius.circular(50),
