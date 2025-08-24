@@ -40,940 +40,173 @@ class _FavouritePageState extends State<FavouritePage> {
                 ],
               ),
               SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
+              Wrap(
+                spacing: 10, // space between items in a row
+                runSpacing: 10, // space between rows
+                alignment: WrapAlignment.start,
                 children: [
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white60,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2), // shadow color
-                          spreadRadius: 2, // how wide the shadow spreads
-                          blurRadius: 8, // how soft the shadow looks
-                          offset: Offset(
-                            0,
-                            4,
-                          ), // x,y position (0 = center, 4 = bottom)
-                        ),
-                      ],
+                  for (var i = 0; i < 6; i++)
+                    FavouriteList().getCard(
+                      image1: "assets/asus.png",
+                      image2: "assets/asus.png",
+                      image3: "assets/asus.png",
+                      image4: "assets/asus.png",
+                      image5: "assets/asus.png",
+                      image6: "assets/asus.png",
+                      image7: "assets/asus.png",
+                      title: "Macbook",
+                      numberOfProducts: "80+ Products",
                     ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                        SizedBox(width: 4),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                    SizedBox(width: 4),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Macbook",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "80+ Products",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white60,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2), // shadow color
-                          spreadRadius: 2, // how wide the shadow spreads
-                          blurRadius: 8, // how soft the shadow looks
-                          offset: Offset(
-                            0,
-                            4,
-                          ), // x,y position (0 = center, 4 = bottom)
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                        SizedBox(width: 4),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                    SizedBox(width: 4),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Dell",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "80+ Products",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white60,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2), // shadow color
-                          spreadRadius: 2, // how wide the shadow spreads
-                          blurRadius: 8, // how soft the shadow looks
-                          offset: Offset(
-                            0,
-                            4,
-                          ), // x,y position (0 = center, 4 = bottom)
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                        SizedBox(width: 4),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                    SizedBox(width: 4),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Macbook",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "80+ Products",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white60,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2), // shadow color
-                          spreadRadius: 2, // how wide the shadow spreads
-                          blurRadius: 8, // how soft the shadow looks
-                          offset: Offset(
-                            0,
-                            4,
-                          ), // x,y position (0 = center, 4 = bottom)
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                        SizedBox(width: 4),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                    SizedBox(width: 4),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Dell",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "80+ Products",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-
-              SizedBox(height: 10),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white60,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2), // shadow color
-                          spreadRadius: 2, // how wide the shadow spreads
-                          blurRadius: 8, // how soft the shadow looks
-                          offset: Offset(
-                            0,
-                            4,
-                          ), // x,y position (0 = center, 4 = bottom)
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                        SizedBox(width: 4),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                    SizedBox(width: 4),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Macbook",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "80+ Products",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white60,
-                      boxShadow: [
-                        BoxShadow(
-                          color: Colors.black.withOpacity(0.2), // shadow color
-                          spreadRadius: 2, // how wide the shadow spreads
-                          blurRadius: 8, // how soft the shadow looks
-                          offset: Offset(
-                            0,
-                            4,
-                          ), // x,y position (0 = center, 4 = bottom)
-                        ),
-                      ],
-                    ),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Row(
-                          children: [
-                            Container(
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                color: Colors.red,
-                              ),
-                              child: Image.asset(
-                                "assets/asus.png",
-                                width: 70,
-                                height: 70,
-                              ),
-                            ),
-                            SizedBox(width: 10),
-                            Column(
-                              children: [
-                                Row(
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                        SizedBox(width: 4),
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              5,
-                                            ),
-                                            color: Colors.red,
-                                          ),
-                                          child: Image.asset(
-                                            "assets/asus.png",
-                                            width: 35,
-                                            height: 35,
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                  ],
-                                ),
-                                SizedBox(height: 4),
-                                Row(
-                                  children: [
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                    SizedBox(width: 4),
-                                    Container(
-                                      decoration: BoxDecoration(
-                                        borderRadius: BorderRadius.circular(5),
-                                        color: Colors.red,
-                                      ),
-                                      child: Image.asset(
-                                        "assets/asus.png",
-                                        width: 35,
-                                        height: 35,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: 10),
-                        Text(
-                          "Dell",
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        Text(
-                          "80+ Products",
-                          style: TextStyle(
-                            color: Colors.grey,
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
                 ],
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+}
+
+class FavouriteList {
+  Widget getCard({
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    title,
+    numberOfProducts,
+  }) {
+    return Container(
+      width: 180,
+      padding: EdgeInsets.all(12),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.white60,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.2), // shadow color
+            spreadRadius: 2, // how wide the shadow spreads
+            blurRadius: 8, // how soft the shadow looks
+            offset: Offset(0, 4), // x,y position (0 = center, 4 = bottom)
+          ),
+        ],
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.red,
+                ),
+                child: Image.asset(image1, width: 70, height: 70),
+              ),
+              SizedBox(width: 10),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.red,
+                ),
+                child: Image.asset("assets/asus.png", width: 70, height: 70),
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          Row(
+            children: [
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.red,
+                ),
+                child: Image.asset("assets/asus.png", width: 70, height: 70),
+              ),
+              SizedBox(width: 10),
+              Column(
+                children: [
+                  Row(
+                    children: [
+                      Row(
+                        children: [
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.red,
+                            ),
+                            child: Image.asset(
+                              "assets/asus.png",
+                              width: 35,
+                              height: 35,
+                            ),
+                          ),
+                          SizedBox(width: 4),
+                          Container(
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(5),
+                              color: Colors.red,
+                            ),
+                            child: Image.asset(
+                              "assets/asus.png",
+                              width: 35,
+                              height: 35,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 4),
+                  Row(
+                    children: [
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.red,
+                        ),
+                        child: Image.asset(
+                          "assets/asus.png",
+                          width: 35,
+                          height: 35,
+                        ),
+                      ),
+                      SizedBox(width: 4),
+                      Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          color: Colors.red,
+                        ),
+                        child: Image.asset(
+                          "assets/asus.png",
+                          width: 35,
+                          height: 35,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ],
+          ),
+          SizedBox(height: 10),
+          Text(
+            "Macbook",
+            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+          ),
+          Text(
+            "80+ Products",
+            style: TextStyle(
+              color: Colors.grey,
+              fontSize: 14,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ],
       ),
     );
   }
