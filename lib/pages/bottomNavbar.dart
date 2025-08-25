@@ -26,7 +26,30 @@ class NovaLapBottomNav extends StatelessWidget {
       ),
       child: BottomNavigationBar(
         currentIndex: currentIndex,
-        onTap: onTap,
+        onTap: (index) async {
+          // Show loading indicator
+          showDialog(
+            context: context,
+            barrierDismissible: false,
+            builder: (BuildContext context) {
+              return const Center(
+                child: CircularProgressIndicator(
+                  color: Colors.blue,
+                  backgroundColor: Colors.white,
+                ),
+              );
+            },
+          );
+
+          // Simulate loading (2 seconds)
+          await Future.delayed(const Duration(seconds: 2));
+
+          // Close loading indicator
+          Navigator.pop(context);
+
+          // ✅ Notify parent to update state
+          onTap(index);
+        },
         selectedItemColor: Colors.deepOrange,
         unselectedItemColor: Colors.black,
         type: BottomNavigationBarType.fixed,

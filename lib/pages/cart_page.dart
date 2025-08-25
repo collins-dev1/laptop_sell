@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:laptop_sell/pages/CartList.dart';
+import 'package:laptop_sell/pages/checkout.dart';
 
 class cartPage extends StatefulWidget {
   const cartPage({super.key});
@@ -50,7 +51,10 @@ class _cartPageState extends State<cartPage> {
                       ],
                     ),
 
-                    child: Icon(Icons.shopping_cart, color: Colors.black),
+                    child: Icon(
+                      Icons.card_travel_outlined,
+                      color: Colors.black,
+                    ),
                   ),
                 ],
               ),
@@ -60,7 +64,7 @@ class _cartPageState extends State<cartPage> {
                 runSpacing: 10, // space between rows
                 alignment: WrapAlignment.start,
                 children: [
-                  for (var i = 0; i < 4; i++)
+                  for (var i = 0; i < 3; i++)
                     CartList().getCard(
                       image:
                           "https://i.pinimg.com/1200x/11/27/40/112740860f91b8b3b57f5a9de70a5b51.jpg",
@@ -71,6 +75,226 @@ class _cartPageState extends State<cartPage> {
                     ),
                 ],
               ),
+              SizedBox(height: 20),
+              // apply promo code
+              Container(
+                width: double.infinity,
+                height: 70,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      spreadRadius: 1,
+                      blurRadius: 8,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 50,
+                        height: 50,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(50),
+                          color: Colors.grey[350],
+                        ),
+                        child: Icon(Icons.receipt, color: Colors.black),
+                      ),
+                      SizedBox(width: 10),
+                      Text(
+                        "Apply a promo code",
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                      SizedBox(width: 50),
+                      TextButton(
+                        style: TextButton.styleFrom(
+                          backgroundColor: Colors.deepOrange,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 13,
+                          ),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(15),
+                          ),
+                          foregroundColor: Colors.white,
+                        ),
+                        onPressed: () => print('Apply Pressed'),
+                        child: Text(
+                          "Apply",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 15,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              // total amount + checkout button
+              Container(
+                width: double.infinity,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.black.withOpacity(0.1),
+                      spreadRadius: 1,
+                      blurRadius: 8,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    children: [
+                      // First row
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              color: Colors.grey.shade300,
+                              width: 1.0,
+                            ),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Subtotal",
+                              style: TextStyle(
+                                color: Colors.black87,
+                                fontSize: 15,
+                              ),
+                            ),
+                            Text(
+                              "\$3600",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      // Second row
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        decoration: BoxDecoration(
+                          border: Border(
+                            bottom: BorderSide(
+                              color: Colors.grey.shade300,
+                              width: 1.0,
+                            ),
+                          ),
+                        ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Delivery Charge",
+                              style: TextStyle(
+                                color: Colors.black87,
+                                fontSize: 15,
+                              ),
+                            ),
+                            Text(
+                              "\$200",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      // Third row (last row without border)
+                      Container(
+                        padding: EdgeInsets.symmetric(vertical: 12),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                              "Total Cost",
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Text(
+                              "\$3800",
+                              style: TextStyle(
+                                color: Colors.deepOrange,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              // checkout button
+              Container(
+                width: double.infinity,
+                height: 60,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    // Show loading indicator
+                    showDialog(
+                      context: context,
+                      barrierDismissible: false,
+                      builder: (BuildContext context) {
+                        return Center(
+                          child: CircularProgressIndicator(
+                            color: Colors.deepOrange,
+                            backgroundColor: Colors.white,
+                          ),
+                        );
+                      },
+                    );
+
+                    // Simulate some loading (e.g., fetch data, auth check, etc.)
+                    await Future.delayed(Duration(seconds: 2));
+
+                    // Close the loading dialog
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const checkoutpage(),
+                      ),
+                    );
+                  },
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Colors.deepOrange,
+                  ),
+                  child: Text(
+                    'Checkout Now',
+                    style: TextStyle(color: Colors.white, fontSize: 18),
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
             ],
           ),
         ),

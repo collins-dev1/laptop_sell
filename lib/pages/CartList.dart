@@ -64,7 +64,7 @@ class CartList {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Icon(Icons.delete, color: Colors.red),
+                Icon(Icons.delete, color: Colors.deepOrange),
                 Row(
                   children: [
                     Container(
