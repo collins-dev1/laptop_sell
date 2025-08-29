@@ -266,7 +266,7 @@ class _cartPageState extends State<cartPage> {
                       builder: (BuildContext context) {
                         return Center(
                           child: CircularProgressIndicator(
-                            color: Colors.deepOrange,
+                            color: Colors.blue,
                             backgroundColor: Colors.white,
                           ),
                         );

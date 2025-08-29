@@ -29,3 +29,7 @@ flutter:
     - assets/googlelogo.png
     - assets/lap1.png
     - assets/lap2.png
+    - assets/mastercard.png
+    - assets/visa.png
+    - assets/paypal.png
+    - assets/delivery.png
