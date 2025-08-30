@@ -54,6 +54,7 @@ class _NovalapHomePageState extends State<NovalapHomePage> {
           padding: EdgeInsets.zero,
           children: const [
             UserAccountsDrawerHeader(
+              decoration: BoxDecoration(color: Colors.blue),
               currentAccountPicture: CircleAvatar(
                 radius: 50,
                 backgroundImage: NetworkImage(
